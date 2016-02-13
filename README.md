@@ -37,6 +37,27 @@ Options:
   -h --help                Display software usage
 ```
 
+### Creating a bookmarklet
+
+To generate a simple bookmarklet for Google Chrome that displays `42` on screen:
+
+```sh
+$ # Generate the output and pipe it the system clipboard
+$ echo "alert(42);" | bookmarkletify | pbcopy
+```
+
+<kbd>⌘</kbd><kbd>⇧</kbd><kbd>b</kbd> to show the bookmarks bar, then right click on it and select "Add Page":
+
+![add-page](./media/01-add-page.png)
+
+Give your bookmarklet a name and, on the URL field, paste the code we previously generated from the command line:
+
+![create-bookmarklet](./media/02-create-bookmarklet.png)
+
+Now you if you click on the bookmarklet you should see the expected result:
+
+![expected-result](./media/03-expected-result.png)
+
 ## License
 
 MIT © [Rafael Rinaldi](http://rinaldi.io)
