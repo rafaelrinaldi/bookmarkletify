@@ -4,10 +4,10 @@
 
 ## Install
 
-Download it to `/usr/local/bin` via cURL:
+Download it to `/usr/local/bin` via [cURL](https://curl.haxx.se):
 
 ```sh
-$ curl https://github.com/rafaelrinaldi/bookmarkletify/blob/master/bookmarkletify > /usr/local/bin/bookmarkletify
+$ curl https://raw.githubusercontent.com/rafaelrinaldi/bookmarkletify/master/bookmarkletify > /usr/local/bin/bookmarkletify
 ```
 
 Compile the binary:
