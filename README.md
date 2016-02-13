@@ -6,10 +6,8 @@
 
 Download it to `/usr/local/bin` via cURL:
 
-<sup>The [git.io](https://git.io) link is just an alias for this repository</sup>
-
 ```sh
-$ curl https://git.io/vgDLC/blob/master/bookmarkletify > /usr/local/bin/bookmarkletify
+$ curl https://github.com/rafaelrinaldi/bookmarkletify/blob/master/bookmarkletify > /usr/local/bin/bookmarkletify
 ```
 
 Compile the binary:
@@ -17,6 +15,10 @@ Compile the binary:
 ```sh
 $ chmod +x /usr/local/bin/bookmarkletify
 ```
+
+## Requirements
+
+[Node.js](https://nodejs.org) (`>=0.10.0`) and [UglifyJS](https://www.npmjs.com/package/uglify-js) (`>=2.6.1`) binaries available on `$PATH`.
 
 ## Usage
 
