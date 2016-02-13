@@ -1,4 +1,4 @@
-# bookmarkletify
+# bookmarkletify [![Build Status](https://semaphoreci.com/api/v1/rafaelrinaldi/bookmarkletify/branches/master/badge.svg)](https://semaphoreci.com/rafaelrinaldi/bookmarkletify)
 
 > Convert JavaScript files to bookmarklets
 
