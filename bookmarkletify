@@ -1,0 +1,60 @@
+#!/bin/bash
+# vim ft=sh
+
+usage() {
+cat << EOF
+
+Usage: bookmarkletify <FILE>
+
+  Convert JavaScript files to bookmarklets
+
+Example:
+  $ bookmarkletify script.js
+
+Via stdin:
+  $ cat script.js | bookmarkletify
+
+Options:
+  -h --help                Display software usage
+EOF
+}
+
+if [[ $@ == "-h" || $@ == "--help" ]]; then
+  usage
+  exit 0
+fi
+
+has_node=`which node`
+has_minifier=`which uglifyjs`
+
+bookmarkletify() {
+  local script=$1
+
+  if [ -z $has_node ]; then
+    echo -e "Haven't found Node.js binary\n\n  $ brew install node"
+    exit 1
+  fi
+
+  if [ -z $has_minifier ]; then
+    echo -e "Haven't found UglifyJS binary\n\n  $ npm install -g uglify-js"
+    exit 1
+  fi
+
+  if [ -t 0 ]; then
+    if [ -z $@  ]; then
+      usage
+      exit
+    fi
+
+    local minified=`uglifyjs $script`
+  else
+    local minified=`uglifyjs -`
+  fi
+
+  local encoded=`node -p "encodeURIComponent('$minified')"`
+  local bookmarklet="javascript:(function(){;$encoded;})()"
+
+  echo $bookmarklet
+}
+
+bookmarkletify $@
