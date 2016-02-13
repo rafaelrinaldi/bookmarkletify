@@ -46,7 +46,7 @@ $ # Generate the output and pipe it the system clipboard
 $ echo "alert(42);" | bookmarkletify | pbcopy
 ```
 
-<kbd>⌘</kbd><kbd>⇧</kbd><kbd>b</kbd> to show the bookmarks bar, then right click on it and select "Add Page":
+<kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>b</kbd> to show the bookmarks bar, then right click on it and select "Add Page":
 
 ![add-page](./media/01-add-page.png)
 
