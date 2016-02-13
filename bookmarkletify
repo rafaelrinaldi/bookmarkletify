@@ -54,7 +54,7 @@ bookmarkletify() {
   local encoded=`node -p "encodeURIComponent('$minified')"`
   local bookmarklet="javascript:(function(){;$encoded;})()"
 
-  echo $bookmarklet
+  echo -n $bookmarklet
 }
 
 bookmarkletify $@
