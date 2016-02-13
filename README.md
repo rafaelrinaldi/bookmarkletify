@@ -54,7 +54,7 @@ Give your bookmarklet a name and, on the URL field, paste the code we previously
 
 ![create-bookmarklet](./media/02-create-bookmarklet.png)
 
-Now you if you click on the bookmarklet you should see the expected result:
+Now if you click on the bookmarklet you should see the expected result:
 
 ![expected-result](./media/03-expected-result.png)
 
