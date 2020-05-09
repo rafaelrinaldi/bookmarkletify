@@ -25,7 +25,6 @@ if [[ $@ == "-h" || $@ == "--help" ]]; then
 fi
 
 has_node=`which node`
-has_minifier=`which uglifyjs`
 
 bookmarkletify() {
   local script=$1
@@ -35,20 +34,15 @@ bookmarkletify() {
     exit 1
   fi
 
-  if [ -z $has_minifier ]; then
-    echo -e "Haven't found UglifyJS binary\n\n  $ npm install -g uglify-js"
-    exit 1
-  fi
-
   if [ -t 0 ]; then
     if [ -z $@  ]; then
       usage
       exit
     fi
 
-    local minified=`uglifyjs $script`
+    local minified=`npx uglify-js $script`
   else
-    local minified=`uglifyjs -`
+    local minified=`npx uglify-js`
   fi
 
   local encoded=`node -p "encodeURIComponent('$minified')"`

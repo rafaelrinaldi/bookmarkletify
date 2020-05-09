@@ -18,7 +18,7 @@ $ chmod +x /usr/local/bin/bookmarkletify
 
 ## Requirements
 
-[Node.js](https://nodejs.org) (`>=0.10.0`) and [UglifyJS](https://www.npmjs.com/package/uglify-js) (`>=2.6.1`) binaries available on `$PATH`.
+[Node.js](https://nodejs.org) (`>=8`)
 
 ## Usage
 
